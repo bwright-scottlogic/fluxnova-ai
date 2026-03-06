@@ -1,1 +1,3 @@
 com.fluxnova.scottlogic.mcp.McpToolsConfiguration
+com.fluxnova.scottlogic.mcp.SecurityConfig
+com.fluxnova.scottlogic.mcp.McpOAuth2SecurityConfig
