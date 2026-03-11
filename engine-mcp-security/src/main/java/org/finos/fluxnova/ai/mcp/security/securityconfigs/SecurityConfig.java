@@ -39,8 +39,8 @@ public class SecurityConfig {
   @Order(1)
   public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
     http
-        // Scope this chain to MCP path only
-      .securityMatcher("/mcp")
+        // Scope this chain to MCP and SSE paths only
+      .securityMatcher("/mcp/**", "/sse/**")
         .authorizeHttpRequests(auth -> auth
             .anyRequest().authenticated()
         )

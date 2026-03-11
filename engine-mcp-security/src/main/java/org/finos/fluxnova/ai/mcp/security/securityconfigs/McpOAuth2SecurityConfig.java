@@ -64,7 +64,7 @@ public class McpOAuth2SecurityConfig {
         logger.info("Enabling OAuth2 authentication for MCP endpoint");
 
         http
-            .securityMatcher("/mcp")
+            .securityMatcher("/mcp/**", "/sse/**")
                 .authorizeHttpRequests(c -> c
                         .anyRequest().authenticated()
                 )
