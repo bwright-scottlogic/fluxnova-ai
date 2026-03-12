@@ -41,20 +41,17 @@ public class SecurityConfig {
   @Order(1)
   public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
     http
-        // Scope this chain to MCP and SSE paths only
       .securityMatcher("/mcp/**", "/sse/**")
         .authorizeHttpRequests(auth -> auth
             .anyRequest().authenticated()
         )
         .httpBasic(Customizer.withDefaults())
         .authenticationProvider(authenticationProvider)
-        // Propagate authenticated principal into the engine's identity context
         .addFilterAfter(engineAuthContextFilter, BasicAuthenticationFilter.class)
-        // MCP clients are stateless — no server-side session needed
         .sessionManagement(session -> session
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         )
-        .csrf(csrf -> csrf.disable()); // SSE transport does not support CSRF tokens
+        .csrf(csrf -> csrf.disable());
 
     return http.build();
   }

@@ -71,7 +71,6 @@ public class McpOAuth2SecurityConfig {
                         .anyRequest().authenticated()
                 )
                 .addFilterAfter(authorizeTokenFilter, OAuth2AuthorizationRequestRedirectFilter.class)
-                // Propagate authenticated principal into the engine's identity context
                 .addFilterAfter(engineAuthContextFilter, BasicAuthenticationFilter.class)
                 .anonymous(AbstractHttpConfigurer::disable)
                 .oidcLogout(c -> c.backChannel(Customizer.withDefaults()))

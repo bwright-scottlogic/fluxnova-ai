@@ -37,7 +37,7 @@ public class EngineBasicAuthProvider implements AuthenticationProvider {
 
     return new UsernamePasswordAuthenticationToken(
         username,
-        null, // credentials cleared after authentication
+        null,
         List.of(new SimpleGrantedAuthority("ROLE_MCP_USER"))
     );
   }
