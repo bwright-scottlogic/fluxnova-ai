@@ -3,6 +3,7 @@ package org.finos.fluxnova.ai.mcp.security.securityconfigs;
 import org.finos.fluxnova.ai.mcp.security.engine.EngineAuthenticationContextFilter;
 import org.finos.fluxnova.ai.mcp.security.engine.EngineBasicAuthProvider;
 import org.finos.fluxnova.bpm.engine.ProcessEngine;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -39,6 +40,7 @@ public class SecurityConfig {
 
   @Bean
   @Order(1)
+  @ConditionalOnMissingBean(name = "mcpOAuth2FilterChain")
   public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
     http
       .securityMatcher("/mcp/**", "/sse/**")
