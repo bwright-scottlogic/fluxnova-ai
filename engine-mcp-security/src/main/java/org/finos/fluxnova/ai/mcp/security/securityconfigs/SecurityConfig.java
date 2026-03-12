@@ -1,5 +1,7 @@
-package org.finos.fluxnova.ai.mcp.security;
+package org.finos.fluxnova.ai.mcp.security.securityconfigs;
 
+import org.finos.fluxnova.ai.mcp.security.engine.EngineAuthenticationContextFilter;
+import org.finos.fluxnova.ai.mcp.security.engine.EngineBasicAuthProvider;
 import org.finos.fluxnova.bpm.engine.ProcessEngine;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

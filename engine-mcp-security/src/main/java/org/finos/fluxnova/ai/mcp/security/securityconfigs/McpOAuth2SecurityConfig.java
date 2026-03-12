@@ -1,5 +1,7 @@
-package org.finos.fluxnova.ai.mcp.security;
+package org.finos.fluxnova.ai.mcp.security.securityconfigs;
 
+import org.finos.fluxnova.ai.mcp.security.engine.EngineAuthenticationContextFilter;
+import org.finos.fluxnova.ai.mcp.security.securityconfigs.conditions.OAuth2ClientsConfiguredCondition;
 import org.finos.fluxnova.bpm.engine.ProcessEngine;
 import org.finos.fluxnova.bpm.spring.boot.starter.security.oauth2.impl.AuthorizeTokenFilter;
 import org.slf4j.Logger;

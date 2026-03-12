@@ -1,4 +1,4 @@
-package main.java.org.finos.fluxnova.ai.mcp.security.autoconfigure;
+package org.finos.fluxnova.ai.mcp.security.autoconfigure;
 
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;

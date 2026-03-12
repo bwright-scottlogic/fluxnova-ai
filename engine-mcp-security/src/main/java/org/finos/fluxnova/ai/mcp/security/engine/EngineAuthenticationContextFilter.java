@@ -1,4 +1,4 @@
-package org.finos.fluxnova.ai.mcp.security;
+package org.finos.fluxnova.ai.mcp.security.engine;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

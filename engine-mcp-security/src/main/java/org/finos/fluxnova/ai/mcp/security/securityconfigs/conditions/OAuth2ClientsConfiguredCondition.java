@@ -1,4 +1,4 @@
-package org.finos.fluxnova.ai.mcp.security;
+package org.finos.fluxnova.ai.mcp.security.securityconfigs.conditions;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionOutcome;
